@@ -89,3 +89,11 @@ $.ajax({
   dataType: "script"
 });
 }}
+
+// Comment Collapse
+$('#collapsecomments').on('shown.bs.collapse', function () {
+  $('#comments .btn span').html("Hide");
+})
+$('#collapsecomments').on('hidden.bs.collapse', function () {
+  $('#comments .btn span').html("Show");
+})
