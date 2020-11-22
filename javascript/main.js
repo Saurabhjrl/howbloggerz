@@ -72,7 +72,7 @@ var displayMailChimpStatus = function (data) {
   if (!mcStatus) return;
   mcStatus.innerHTML = data.msg;
 
-  mcStatus.addAttribute('tabindex', '-1');
+  mcStatus.setAttribute('tabindex', '-1');
   mcStatus.focus();
 
   if (data.result === 'error') {
