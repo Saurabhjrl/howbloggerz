@@ -187,6 +187,9 @@ h1.post-title { color: var(--black); font-size: 34px; margin-bottom: 30px; }
 /** Post Sub **/
 #postSub { background: var(--backgroundhigh); color: var(--black); font-size: 1.1em; position: relative; }
 .form-row>.col, .form-row>[class*="col-"] { z-index: 10; }
+.mc-status:focus { outline: none; }
+.success-message { var(--green); }
+.error-message { var(--red); }
 
 /** Related Posts **/
 #related #related-title h3 { font-size: 1.5em; }
