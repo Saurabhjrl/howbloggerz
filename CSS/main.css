@@ -84,6 +84,12 @@ body { background: var(--white); color: var(--content-color); font-family: var(-
 .header-wrapper .search .btn { padding: 0; color: var(--linkcolor); }
 .header-wrapper .search .btn svg { height: 1.8em; width: 1.8em; }
 
+/** Shoutout **/
+#shoutout { padding-top: 58px; background-color: var(--backgroundcolor); }
+#shoutout .shoutout-left img { height: 270px; width: auto; }
+#shoutout .shoutout-right .sub-heading { font-family: var(--sub-heading-family); font-size: 2em; color: var(--red); }
+#shoutout .shoutout-right .desc { font-size: 1.4em; font-weight: 500; padding-top: 1em; }
+
 /** Blog Post CSS **/
 .singleItem .Blog { box-shadow: 0 0 10px #EAEAEA; margin-bottom: 3em; background-color: var(--white); border-radius: .3em; }
 
@@ -927,6 +933,7 @@ div.code-toolbar {
 
 /***************************************** Responsive styles ******************************************/
 @media (max-width: 575.98px) {
+  #shoutout .shoutout-right .desc { font-size: 1.2em; }
   h1 { font-size: 2em; }
   h1.post-title { font-size: 1.9rem }
   .post-body h2 { font-size: 1.5rem }
