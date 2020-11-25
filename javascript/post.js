@@ -97,3 +97,16 @@ $('#collapsecomments').on('shown.bs.collapse', function () {
 $('#collapsecomments').on('hidden.bs.collapse', function () {
   $('#comments .btn span').html("Show");
 })
+
+// In article ad
+var inartad = '<div id="AdSense1"><ins class="adsbygoogle" data-ad-client="ca-pub-9953474513364330" data-ad-format="fluid" data-ad-layout="in-article" data-ad-slot="6966307993" style="display:block; text-align:center;"/></div>'
+if($(".post-body > p:lt(1)").length){
+	$(inartad).insertAfter($('.post-body > p:lt(1)'));
+}
+else if($(".post-body > br:lt(1)").length){
+	$(inartad).insertAfter($('.post-body > br:lt(1)'));
+}
+// Adsense max push
+(adsbygoogle = window.adsbygoogle || []).push({});
+(adsbygoogle = window.adsbygoogle || []).push({});
+(adsbygoogle = window.adsbygoogle || []).push({});
