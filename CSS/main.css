@@ -111,6 +111,7 @@ body { background: var(--white); color: var(--content-color); font-family: var(-
 #Header, #Featured .LinkList, #Social-links .LinkList, .header-wrapper .search .btn, .header-wrapper .main .btn { position: relative; top: 50%; right: 50%; transform: translate(50%, -50%); }
 
 h1.post-title { color: var(--black); font-size: 34px; margin-bottom: 30px; }
+h1.post-title a { pointer-events: none; cursor: default; color: inherit; }
 .post-body { font-size: 15px; line-height: 25px; font-weight: normal; padding: 0; margin: 0; text-transform: auto; word-wrap: break-word; text-align: left; }
 .post-body p { padding: 0 0 20px 0; }
 .post-body h2 { font-size: 1.8em; line-height: 1.361em; margin: 10px 0; padding: 5px 0; }
