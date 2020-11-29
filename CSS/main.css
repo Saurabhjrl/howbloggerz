@@ -120,16 +120,17 @@ h1.post-title a { pointer-events: none; cursor: default; color: inherit; }
 .post-body img { max-width: 100%; margin: 20px 0; }
 .post-body ul { margin-bottom: 1em; }
 .post-body ul li { margin-left: 15px; }
+.post-body ul.nav li { margin-left: 0; list-style: none; padding: 0; }
 .post-body .ht { font-size: 20px; font-weight: 600; }
 .post-body .pnote { opacity: 0.7 }
 .post-body .step { color: var(--keycolor); font-weight: bold; }
 .post-body #hht { padding-left: 10px; border-left: 10px solid var(--red); margin: 30px 0 20px 0; }
 
 .post-body ol.steps { counter-reset: li; margin-bottom: 2em; }
-.post-body ol.steps li { list-style-type: none; padding: 0 0 5px; margin: 0.7em 0 0.7em 3em; position: relative; }
-.post-body ol.steps li::before { content: counter(li); counter-increment: li; background: var(--red); border-radius: 8px; color: var(--white); width: 25px; height: 25px; line-height: 25px; text-align: center; position: absolute; left: -3em; top: 1px; z-index: 10; }
-.post-body ol.steps li::after { content: '\276F'; position: absolute; left: -2em; color: var(--red); transition: all 500ms ease-in-out; width: 25px; height: 25px; top: 1px; }
-.post-body ol.steps li:hover::after { left: -1em; }
+.post-body ol.steps > li { list-style-type: none; padding: 0 0 5px; margin: 0.7em 0 0.7em 3em; position: relative; }
+.post-body ol.steps > li::before { content: counter(li); counter-increment: li; background: var(--red); border-radius: 8px; color: var(--white); width: 25px; height: 25px; line-height: 25px; text-align: center; position: absolute; left: -3em; top: 1px; z-index: 10; }
+.post-body ol.steps > li::after { content: '\276F'; position: absolute; left: -2em; color: var(--red); transition: all 500ms ease-in-out; width: 25px; height: 25px; top: 1px; }
+.post-body ol.steps > li:hover::after { left: -1em; }
 
 /** Post header **/
 .singleItem .post-labels { background-color: var(--backgroundcolor); border-radius: 5px; padding: .25em; margin-bottom: 1em; }
@@ -147,9 +148,9 @@ h1.post-title a { pointer-events: none; cursor: default; color: inherit; }
 
 /** Post extensions **/
 #AdSense1 {	padding-bottom: 1rem; }
-.hbz-demo a { color: var(--white); background: var(--keycolor); border-radius: 5px; margin: 20px; display: inline-block; text-align: center; height: 50px; width: 200px; line-height: 50px; position: relative; z-index: 2; }
-.hbz-demo a:active::after { content: ''; display: inline-block; width: inherit; height: inherit; position: absolute; top: 0; left: 0; z-index: 1; background-color: var(--keycolor); animation: expand 0.5s ease, fade-out 0.5s linear; }
-.hbz-demo a:hover, .hbz-demo a:focus { background: var(--keycolorhover); }
+.demo { color: var(--white); background: var(--keycolor); border-radius: 5px; margin: 20px; display: inline-block; text-align: center; padding: 0 10px; line-height: 50px; position: relative; z-index: 2; }
+.demo:active::after { content: ''; display: inline-block; width: inherit; height: inherit; position: absolute; top: 0; left: 0; z-index: 1; background-color: var(--keycolor); animation: expand 0.5s ease, fade-out 0.5s linear; }
+.demo:hover, .demo:focus { background: var(--keycolorhover); color: var(--white); }
 @keyframes expand {
   from {
     transform: scale(1)
@@ -328,7 +329,7 @@ pre[class*=language-] {
   padding: 0;
   border: 1px solid var(--dark);
   border-radius: 0.5em;
-  height: 351px;
+  max-height: 351px;
 }
 
 pre[class*="language-"] > code {
