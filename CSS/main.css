@@ -343,6 +343,7 @@ pre[class*="language-"] > code {
 	border-radius: 0.5em;
 	box-shadow: inset 0px 1px 0px 0px var(--dark);
   border-bottom: 10px solid var(--dark);
+  padding: 1rem;
 }
 
 code[class*=language-] {
