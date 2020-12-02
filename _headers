@@ -1,4 +1,4 @@
-# Media: images, icons, video, audio, HTC
+# Media: images, icons, video, audio
 /*.jpg
   Cache-Control: max-age=2592000, public
 /*.jpeg
@@ -7,23 +7,13 @@
   Cache-Control: max-age=2592000, public
 /*.png
   Cache-Control: max-age=2592000, public
+/*.webp
+  Cache-Control: max-age=2592000, public
 /*.ico
-  Cache-Control: max-age=2592000, public
-/*.cur
-  Cache-Control: max-age=2592000, public
-/*.gz
   Cache-Control: max-age=2592000, public
 /*.svg
   Cache-Control: max-age=2592000, public
 /*.mp4
   Cache-Control: max-age=2592000, public
-/*.ogg
-  Cache-Control: max-age=2592000, public
-/*.ogv
-  Cache-Control: max-age=2592000, public
 /*.webm
-  Cache-Control: max-age=2592000, public
-/*.htc
-  Cache-Control: max-age=2592000, public
-/*.svgz
   Cache-Control: max-age=2592000, public
