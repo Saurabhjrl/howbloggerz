@@ -18,9 +18,49 @@
 /** Custom bootstrap **/
 .btn-danger { background-color: var(--red); }
 .nav-tabs .nav-link { color: initial; }
+.btn.focus, .btn:focus { box-shadow: none; }
+.accordion { margin: 2rem 0 3rem; }
+.accordion > .card { border: 1px solid #ddd; background-color: inherit; }
+.accordion .card-header { padding: 0; }
+.accordion .card-header h4 { margin: 0; padding: 0; }
 
 /** hidden **/
 .datemod, .mainimg { display: none; }
+
+/** icons **/
+@font-face {
+  font-family: 'icons';
+  src:  url('fonts/icomoon.eot?z6fo96');
+  src:  url('fonts/icomoon.eot?z6fo96#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?z6fo96') format('truetype'),
+    url('fonts/icomoon.woff?z6fo96') format('woff'),
+    url('fonts/icomoon.svg?z6fo96#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  font-family: 'icons' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-chevron-down-solid:before {
+  content: "\e900";
+}
+.icon-chevron-up-solid:before {
+  content: "\e901";
+}
+
 
 /** reset.css **/
 * { transition: all .2s linear; -webkit-transition: all .2s linear; -moz-transition: all .2s linear; -o-transition: all .2s linear; outline: none; }
@@ -35,7 +75,7 @@ a img { border: none; }
 ol li { list-style-type: decimal; padding: 0 0 5px; }
 ul ul, ol ol { padding: 0; }
 h1, h2, h3, h4, h5, h6 { font-weight: normal; text-align: left; font-family: var(--heading-family); text-transform: capitalize; color: var(--black) }
-kbd { border: 1px solid gray; font-size: 1.2em; box-shadow: 1px 0 1px 0 #eee, 0 2px 0 2px #F1F1F1, 0 2px 0 3px #444; line-height: 1.9em; -webkit-border-radius: 3px; -moz-border-radius: 3px; border-radius: 3px; margin: 2px 9px 0 3px; padding: 1px 5px; }
+kbd { border: 1px solid gray; font-size: 1.2em; box-shadow: 1px 0 1px 0 #eee, 0 2px 0 2px #F1F1F1, 0 2px 0 3px #444; line-height: 1.9em; -webkit-border-radius: 3px; -moz-border-radius: 3px; border-radius: 3px; margin: 2px 9px 0 21px; padding: 1px 5px; }
 .pt-6 { padding-top: 4.5em; }
 svg { display: inline-block; font-size: inherit; height: 1em; width: 1.25em; overflow: visible; vertical-align: -.125em; }
 
@@ -121,11 +161,12 @@ h1.post-title a { pointer-events: none; cursor: default; color: inherit; }
 .post-body h4 { font-size: 1.2rem; padding: 1rem 0; }
 .post-body h5 { font-size: 1.1rem; color: inherit; padding: 1rem 0; }
 .post-body img { max-width: 100%; margin: 20px 0; }
+.post-body .cimg img { display: block; margin: 20px auto; }
 .post-body ul { margin-bottom: 1em; }
 .post-body ul li { margin-left: 15px; }
 .post-body ol li { margin-left: 1rem; }
 .post-body ul.nav li { margin-left: 0; list-style: none; padding: 0; }
-.post-body .ht { font-size: 20px; font-weight: 600; }
+.post-body .ht { font-size: 20px; font-weight: 600; margin-top: 2rem; }
 .post-body .step { color: var(--keycolor); font-weight: bold; }
 .post-body #hht { padding-left: 10px; border-left: 10px solid var(--red); margin: 30px 0 20px 0; }
 .post-body .action { color: #f57c00; }
@@ -492,7 +533,7 @@ pre[data-line] code {
 }
 
 pre .line-highlight {
-  margin-top: 0
+  margin-top: 1rem;
 }
 
 /*Line Number*/
@@ -582,6 +623,67 @@ div.code-toolbar > .toolbar a:focus, div.code-toolbar > .toolbar a:hover, div.co
 
 div.code-toolbar {
   width: 100%;
+}
+
+/* Line Highlight */
+pre[data-line] {
+	position: relative;
+	padding: 1em 0 1em 3em;
+}
+
+.line-highlight {
+	position: absolute;
+	left: 0;
+	right: 0;
+	padding: inherit 0;
+	margin-top: 1em; /* Same as .prism’s padding-top */
+
+	background: hsla(24, 20%, 50%,.08);
+	background: linear-gradient(to right, hsla(24, 20%, 50%,.1) 70%, hsla(24, 20%, 50%,0));
+
+	pointer-events: none;
+
+	line-height: inherit;
+	white-space: pre;
+}
+
+	.line-highlight:before,
+	.line-highlight[data-end]:after {
+		content: attr(data-start);
+		position: absolute;
+		top: .4em;
+		left: .6em;
+		min-width: 1em;
+		padding: 0 .5em;
+		background-color: hsla(24, 20%, 50%,.4);
+		color: hsl(24, 20%, 95%);
+		font: bold 65%/1.5 sans-serif;
+		text-align: center;
+		vertical-align: .3em;
+		border-radius: 999px;
+		text-shadow: none;
+		box-shadow: 0 1px white;
+	}
+
+	.line-highlight[data-end]:after {
+		content: attr(data-end);
+		top: auto;
+		bottom: .4em;
+	}
+
+.line-numbers .line-highlight:before,
+.line-numbers .line-highlight:after {
+	content: none;
+}
+
+pre[id].linkable-line-numbers span.line-numbers-rows {
+	pointer-events: all;
+}
+pre[id].linkable-line-numbers span.line-numbers-rows > span:before {
+	cursor: pointer;
+}
+pre[id].linkable-line-numbers span.line-numbers-rows > span:hover:before {
+	background-color: rgba(128, 128, 128, .2);
 }
 
 /** Bubble Animation **/
