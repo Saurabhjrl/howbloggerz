@@ -65,7 +65,7 @@ function printRelatedLabels_thumbs() {
     var rhtml = '';
     if (relatedTitles.length > 0) var rtitle = '<h3>' + relatedpoststitle + '</h3>';
     while (i < relatedTitles.length && i < 20 && i < maxresults) {
-        rhtml += '<div class="col mb-4"><div class="card h-100"><a href="' + relatedUrls[r] + '"><img class="card-img-top" alt="' + relatedTitles[r] + '" src="' + thumburl[r] + '"/></a><div class="card-body"><h3 class="card-title"><a href="' + relatedUrls[r] + '" rel="bookmark">' + relatedTitles[r] + '</a></h3></div></div></div>';
+        rhtml += '<div class="col mb-4"><div class="card h-100"><a href="' + relatedUrls[r] + '"><img class="card-img-top lazyload" alt="' + relatedTitles[r] + '" data-src="' + thumburl[r] + '"/></a><div class="card-body"><h3 class="card-title"><a href="' + relatedUrls[r] + '" rel="bookmark">' + relatedTitles[r] + '</a></h3></div></div></div>';
         if (r < relatedTitles.length - 1) {
             r++
         } else {
