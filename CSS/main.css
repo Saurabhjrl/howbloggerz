@@ -30,11 +30,11 @@
 /** icons **/
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?z6fo96');
-  src:  url('fonts/icomoon.eot?z6fo96#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?z6fo96') format('truetype'),
-    url('fonts/icomoon.woff?z6fo96') format('woff'),
-    url('fonts/icomoon.svg?z6fo96#icomoon') format('svg');
+  src:  url('https://www.gh.howbloggerz.com/CSS/fonts/icomoon.eot?z6fo96');
+  src:  url('https://www.gh.howbloggerz.com/CSS/fonts/icomoon.eot?z6fo96#iefix') format('embedded-opentype'),
+    url('https://www.gh.howbloggerz.com/CSS/fonts/icomoon.ttf?z6fo96') format('truetype'),
+    url('https://www.gh.howbloggerz.com/CSS/fonts/icomoon.woff?z6fo96') format('woff'),
+    url('https://www.gh.howbloggerz.com/CSS/fonts/icomoon.svg?z6fo96#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
