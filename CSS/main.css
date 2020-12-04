@@ -29,7 +29,7 @@
 
 /** icons **/
 @font-face {
-  font-family: 'icons';
+  font-family: 'icomoon';
   src:  url('fonts/icomoon.eot?z6fo96');
   src:  url('fonts/icomoon.eot?z6fo96#iefix') format('embedded-opentype'),
     url('fonts/icomoon.ttf?z6fo96') format('truetype'),
@@ -41,7 +41,7 @@
 }
 
 [class^="icon-"], [class*=" icon-"] {
-  font-family: 'icons' !important;
+  font-family: 'icomoon' !important;
   speak: never;
   font-style: normal;
   font-weight: normal;
