@@ -246,7 +246,7 @@ h1.post-title a { pointer-events: none; cursor: default; color: inherit; }
 #comments { font-size: 14px; line-height: 20px; }
 #comments .btnToggle { margin: 40px 0; }
 #comments .btnToggle, .comment-form .btn { position: relative; left: 50%; transform: translateX(-50%); }
-.comments li { list-style-type: none; margin-bottom: 2.5rem; }
+.comments li { list-style-type: none; margin-bottom: 1.5rem; }
 .comments .row { padding: 20px 10px 20px 20px; background-color: var(--white); border-radius: 10px; box-shadow: 0 1px 70px 2px #ebebeb; margin: 1rem 0; }
 .comments .replies .row { opacity: 0.8; background-color: #fafafa; margin: 1rem 0 1rem 0; }
 .comments .author-image img { width: 60px; height: 60px; border-radius: 50%; }
@@ -256,6 +256,7 @@ h1.post-title a { pointer-events: none; cursor: default; color: inherit; }
 .comment-content { word-wrap: break-word; margin-top: 10px; }
 .comment-actions { margin-top: 10px; text-align: right; }
 .comment-actions a, .comment-actions button { font-size: 12px; font-weight: bold; line-height: normal; padding: 5px 8px; border: 1px solid #dddddd; margin: 3px; color: var(--keycolor); }
+.comment-actions .btn.disabled, .comment-actions .btn:disabled { color: var(--black); }
 .comment-form .btn {   display: none; margin-bottom: 3rem; }
 #comment-editor { height: 250px !important; }
 
