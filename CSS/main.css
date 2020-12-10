@@ -210,6 +210,12 @@ h1.post-title a { pointer-events: none; cursor: default; color: inherit; }
 .hbz-table tr th, .hbz-table tr td { border: 1px solid var(--backgroundcolor) width: 33%; padding: 1%; }
 .hbz-table tr th { background-color: #ededed; }
 .hbz-table tr span { margin-left: 10px; color: var(--keycolor); }
+#changelog { opacity: 0.7; font-size: 90%; }
+#changelog span { width: 100%; display: block; }
+#changelog ul {	margin: 0.5rem 0; }
+#changelog li { list-style: none; line-height: 1rem; }
+#changelog ul span { color: var(--black); }
+#changelog ul span:first-child { border-bottom: 3px solid var(--backgroundcolor); }
 
 /** Page Nav CSS **/
 #blog-pager { text-align: center; font-size: 14px; margin: 40px 0px 3.9em; background-color: var(--backgroundcolor); border-radius: 5px; }

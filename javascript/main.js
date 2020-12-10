@@ -83,3 +83,19 @@ var displayMailChimpStatus = function (data) {
   mcStatus.classList.remove('error-message');
   mcStatus.classList.add('success-message');
 };
+
+// Smooth scroll hash
+$(document).ready(function() {
+    $('a[href*=\\#]').on('click', function(e) {
+        e.preventDefault();
+        $('html, body').animate({
+            scrollTop: $(this.hash).offset().top - 80
+        }, 500);
+    });
+    if (window.location.hash) {
+        var hash = window.location.hash;
+        $('html, body').animate({
+            scrollTop: $(hash).offset().top - 80
+        }, 500);
+    };
+});
