@@ -122,18 +122,17 @@ body { background: var(--white); color: var(--content-color); font-family: var(-
 /** Blog Post CSS **/
 .singleItem .Blog { box-shadow: 0 0 10px #EAEAEA; margin-bottom: 3em; background-color: var(--white); border-radius: .3em; }
 
-.card { background-color: var(--backgroundcolor); border: 0; }
+.card {  background: rgb(255,255,255); background: -moz-linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 60%, rgba(249,248,250,1) 100%); background: -webkit-linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 60%, rgba(249,248,250,1) 100%); background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 60%, rgba(249,248,250,1) 100%); }
 .card-title { line-height: 0.6em; }
 .card-title a { font-size: 0.55em; color: var(--heading-color); font-family: var(--content-family); }
 .card-title a:hover { color: var(--keycolor); }
+.multipleItems .card-title { margin-bottom: 2rem; }
 
 .post-labels li { list-style: none; display: inline; }
-.multipleItems .post-labels a { background-color: #D0ECFF; color: #130074; margin: 0px 0px 0px 5px; padding: .25em; font-size: .8em; border-radius: 5px; }
-.multipleItems .post-labels li:nth-child(odd) a { background-color: #e55e4e; color: #ffffff; }
-.multipleItems .post-labels a::before { content: '#'; top: -1px; position: relative; }
+.multipleItems .post-labels a { color: var(--gray); margin: 0px 0px 0px 5px; padding: .25em .5em; font-size: .8em; border-radius: 20px; border: 3px solid #e8e8e8; }
+.multipleItems .post-labels a:hover { border-color: #d0d0d0 }
+.multipleItems .post-labels a::before { content: '#'; }
 .multipleItems .post-labels li:first-child a { margin-left: 0; }
-.multipleItems article:nth-child(even) .post-labels li:nth-child(odd) a { background-color: #4193e6; color: #fff; }
-.multipleItems article:nth-child(odd) .post-labels li:nth-child(3) a { background-color: var(--black); color: var(--white); }
 
 .singleItem .post, .singleItem #related, #postSub { padding: 40px; }
 
@@ -178,8 +177,9 @@ h1.post-title a { pointer-events: none; cursor: default; color: inherit; }
 .post-header .author-profile img { border-bottom-left-radius: 50%; width: 60px; border-bottom-right-radius: 50%; }
 .post-header .semi-circle { width: 80px; height: 40px; border-bottom-left-radius: 100px; border-bottom-right-radius: 100px; border: 10px solid var(--cyan); border-top: 0; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; position: absolute; top: 29px; left: 5px; }
 .post-header .author-details, .post-header .post-date-mod { position: relative; top: 5px; }
-.post-header .author-name a, .post-header .post-date-mod .post-date-last { color: var(--black); }
+.post-header .author-name a, .post-header .post-date-mod .post-date-last a { color: var(--black); }
 .post-header .author-name a:hover { color: var(--red); }
+.post-header .post-date-mod .post-date-last a:hover { color: var(--keycolor) }
 
 /** Post extensions **/
 #AdSense1 {	padding-bottom: 1rem; }
