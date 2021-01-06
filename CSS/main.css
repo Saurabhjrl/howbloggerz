@@ -6,29 +6,49 @@
   --keycolorhover: #185abc;
   --linkcolor: #5f6368;
   --heading-color: #383838;
-  --black: #1b1b1b !important;
-  --red: #e43e2b;
-  --dark: #222222;
   --heading-family: 'Patua One', cursive;
   --content-family: 'Roboto Slab', serif;
   --content-color: #595959;
   --sub-heading-family: 'Bilbo', cursive;
+  --black: #1b1b1b !important;
+	--blue: #007bff;
+	--indigo: #6610f2;
+	--purple: #6f42c1;
+	--pink: #e83e8c;
+	--red: #e43e2b;
+	--orange: #fd7e14;
+	--yellow: #ffc107;
+	--green: #28a745;
+	--teal: #20c997;
+	--cyan: #17a2b8;
+	--white: #fff;
+	--gray: #6c757d;
+	--gray-dark: #343a40;
+	--primary: #007bff;
+	--secondary: #6c757d;
+	--success: #28a745;
+	--info: #17a2b8;
+	--warning: #ffc107;
+	--danger: #dc3545;
+	--light: #f8f9fa;
+	--dark: #222222;
 }
 
 /** icons **/
 @font-face {
   font-family: 'icomoon';
-  src:  url('https://cdn.jsdelivr.net/gh/Saurabhjrl/howbloggerz/CSS/fonts/icomoon.eot');
-  src:  url('https://cdn.jsdelivr.net/gh/Saurabhjrl/howbloggerz/CSS/fonts/icomoon.eot') format('embedded-opentype'),
-    url('https://cdn.jsdelivr.net/gh/Saurabhjrl/howbloggerz/CSS/fonts/icomoon.ttf') format('truetype'),
-    url('https://cdn.jsdelivr.net/gh/Saurabhjrl/howbloggerz/CSS/fonts/icomoon.woff') format('woff'),
-    url('https://cdn.jsdelivr.net/gh/Saurabhjrl/howbloggerz/CSS/fonts/icomoon.svg') format('svg');
+  src:  url('https://www.gh.howbloggerz.com/CSS/fonts/icomoon.eot');
+  src:  url('https://www.gh.howbloggerz.com/CSS/fonts/icomoon.eot') format('embedded-opentype'),
+    url('https://www.gh.howbloggerz.com/CSS/fonts/icomoon.ttf') format('truetype'),
+    url('https://www.gh.howbloggerz.com/CSS/fonts/icomoon.woff') format('woff'),
+    url('https://www.gh.howbloggerz.com/CSS/fonts/icomoon.svg') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
 }
 
 [class^="icon-"], [class*=" icon-"] { font-family: 'icomoon' !important; speak: never; font-style: normal; font-weight: normal; font-variant: normal; text-transform: none; line-height: 1; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+.icon-save:before { content: "\e900"; }
 .icon-chevron-up-solid:before { content: "\e901"; }
 
 /** Custom bootstrap **/
@@ -36,12 +56,6 @@
 .nav-tabs .nav-link { color: initial; }
 .btn.focus, .btn:focus { box-shadow: none; }
 .accordion { margin: 2rem 0 3rem; }
-.accordion > .card { border: 1px solid #ddd; background-color: inherit; }
-.accordion .card-header { padding: 0; }
-.accordion .card-header h3, .accordion .card-header h4 { margin: 0; padding: 0; }
-.accordion .card-header button { position: relative; }
-.accordion .card-header button::after { content: "\e901"; right: 1rem; position: absolute; transform: rotate(90deg); font-family: "icomoon"; transition: all ease-in-out 100ms; }
-.accordion .card-header button[aria-expanded="true"]::after { content: "\e901"; transform: rotate(180deg)}
 .mark, mark { background-color: var(--danger); border-radius: 5px; color: var(--white); }
 
 /** hidden **/
@@ -175,7 +189,7 @@ h1.post-title a { pointer-events: none; cursor: default; color: inherit; }
 .singleItem .post-labels li:last-child a::after { content: '\21B4'; padding: 0 0 0 .3em; }
 
 .post-header .author-profile img { border-bottom-left-radius: 50%; width: 60px; border-bottom-right-radius: 50%; }
-.post-header .semi-circle { width: 80px; height: 40px; border-bottom-left-radius: 100px; border-bottom-right-radius: 100px; border: 10px solid var(--cyan); border-top: 0; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; position: absolute; top: 29px; left: 5px; }
+.post-header .semi-circle { width: 80px; height: 40px; border-bottom-left-radius: 100px; border-bottom-right-radius: 100px; border: 10px solid var(--cyan); border-top: 0; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; position: absolute; bottom: -9px; left: 2px; }
 .post-header .author-details, .post-header .post-date-mod { position: relative; top: 5px; }
 .post-header .author-name a, .post-header .post-date-mod .post-date-last a { color: var(--black); }
 .post-header .author-name a:hover { color: var(--red); }
@@ -216,6 +230,9 @@ h1.post-title a { pointer-events: none; cursor: default; color: inherit; }
 #changelog li { list-style: none; line-height: 1rem; }
 #changelog ul span { color: var(--black); }
 #changelog ul span:first-child { border-bottom: 3px solid var(--backgroundcolor); }
+.disabled { opacity: 0.5; pointer-events:none; }
+.styleMain, .styleSocial { display: none }
+label img { margin: 0 !important; }
 
 /** Page Nav CSS **/
 #blog-pager { text-align: center; font-size: 14px; margin: 40px 0px 3.9em; background-color: var(--backgroundcolor); border-radius: 5px; }
