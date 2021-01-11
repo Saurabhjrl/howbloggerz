@@ -192,7 +192,7 @@ h1.post-title a { pointer-events: none; cursor: default; color: inherit; }
 .singleItem .post-labels li:last-child a::after { content: '\21B4'; padding: 0 0 0 .3em; }
 
 .post-header .author-profile img { border-bottom-left-radius: 50%; width: 60px; border-bottom-right-radius: 50%; }
-.post-header .semi-circle { width: 80px; height: 40px; border-bottom-left-radius: 100px; border-bottom-right-radius: 100px; border: 10px solid var(--cyan); border-top: 0; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; position: absolute; bottom: -9px; left: 2px; }
+.post-header .semi-circle { display: none; width: 80px; height: 40px; border-bottom-left-radius: 100px; border-bottom-right-radius: 100px; border: 10px solid var(--cyan); border-top: 0; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; position: absolute; bottom: -9px; left: 2px; }
 .post-header .author-details, .post-header .post-date-mod { position: relative; top: 5px; }
 .post-header .author-name a, .post-header .post-date-mod .post-date-last a { color: var(--black); }
 .post-header .author-name a:hover { color: var(--red); }
