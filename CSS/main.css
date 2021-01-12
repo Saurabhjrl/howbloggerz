@@ -58,6 +58,7 @@
 .btn.focus, .btn:focus { box-shadow: none; }
 .accordion { margin: 2rem 0 3rem; }
 .mark, mark { background-color: var(--danger); border-radius: 5px; color: var(--white); }
+.accordion-header h4, .accordion-header h3 { padding: 0 !important; margin: 0!important; }
 [data-bs-toggle="popover"] { cursor: default; }
 
 /** hidden **/
