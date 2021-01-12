@@ -86,7 +86,7 @@ var displayMailChimpStatus = function (data) {
 
 // Smooth scroll hash
 $(document).ready(function() {
-    $('a[href*=\\#]').on('click', function(e) {
+    $('a[href*=\\#]:not(a[role="tab"])').on('click', function(e) {
         e.preventDefault();
         $('html, body').animate({
             scrollTop: $(this.hash).offset().top - 80
